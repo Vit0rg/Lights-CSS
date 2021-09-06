@@ -1,0 +1,103 @@
+*,*::after,*::before
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root
+{
+  --max: 100%;
+  --vermelho: hsl(0, 100%, 60%);
+  --laranja: hsl(25, 100%, 40%);
+  --amarelo: hsl(50, 100%, 50%);
+  --verde: hsl(115, 100%, 25%);
+  --ciano: hsl(190, 100%, 40%);
+  --azul: hsl(234, 100%, 35%);
+  --roxo: hsl(281, 100%, 30%);
+}
+
+body
+{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 10%);
+}
+
+header
+{
+  max-height: 20vh;
+}
+
+header h1
+{
+  font-size: 3em;
+  font-weight: bold;
+  color: hsl(0, 0%, 80%);
+  padding: 0.5% 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+main
+{
+  background-color: hsl(0, 0%, 5%);
+  min-height: 80vh;
+  display: flex;
+}
+
+main #container 
+{
+  width: var(--max);
+  min-height: var(--max);
+  padding: .5% .5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+main #container .linha
+{
+  opacity: 50%;
+  min-width: 1%;
+  max-width: 2%;
+  background-color: red;
+  height: var(--max);
+  animation: rainbow 10s infinite ease-in-out alternate;
+}
+
+main #container .conteudo
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 2%;
+  color: white;
+  opacity: 90%;
+}
+
+main #container .conteudo p
+{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-bottom: 4%;
+  margin-top: 4%;
+  font-size: 120%;
+}
+
+main #container .conteudo p :last-child
+{
+  padding-bottom: 0;
+}
+
+@keyframes rainbow 
+{
+  0%{background-color: var(--vermelho);}
+  17%{background-color: var(--laranja);}
+  33%{background-color: var(--amarelo);}
+  49%{background-color: var(--verde);}
+  65%{background-color: var(--ciano);}
+  81%{background-color: var(--azul);}
+  100%{background-color: var(--roxo);}
+}
