@@ -91,6 +91,12 @@ main #container .conteudo p :last-child
   padding-bottom: 0;
 }
 
+footer
+{
+  min-height: 3vh;
+  width: var(--max);
+}
+
 @keyframes rainbow 
 {
   0%{background-color: var(--vermelho);}
